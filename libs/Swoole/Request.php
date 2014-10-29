@@ -62,6 +62,6 @@ class Request
 
     function isWebSocket()
     {
-        return isset($this->head['Upgrade']) && $this->head['Upgrade'] == 'websocket';
+        return isset($this->head['Upgrade']) && strtolower($this->head['Upgrade']) == 'websocket';
     }
 }
